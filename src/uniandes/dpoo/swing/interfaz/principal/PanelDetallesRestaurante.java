@@ -7,7 +7,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
+import javax.swing.border.EmptyBorder;
 import uniandes.dpoo.swing.mundo.Restaurante;
 
 @SuppressWarnings("serial")
@@ -30,18 +30,23 @@ public class PanelDetallesRestaurante extends JPanel
 
     public PanelDetallesRestaurante( )
     {
-    	 setLayout(new GridLayout(3, 1, 8, 8));
-
-    	    labNombre = new JLabel("");
-    	    add(labNombre);
-
-    	    labCalificacion = new JLabel();
-    	    labCalificacion.setIcon(buscarIconoCalificacion(3));
-    	    add(labCalificacion);
-
-    	    chkVisitado = new JCheckBox("Visitado");
-    	    chkVisitado.setEnabled(false);
-    	    add(chkVisitado);
+    	setLayout(new GridLayout(3, 2, 8, 4));
+        setBorder(new EmptyBorder(6, 8, 6, 8));
+        
+        add(new JLabel("Nombre:"));
+        labNombre = new JLabel("-");
+        add(labNombre);
+        
+        add(new JLabel("Calificación:"));
+        labCalificacion = new JLabel();
+        labCalificacion.setIcon(buscarIconoCalificacion(3));
+        add(labCalificacion);
+        
+        add(new JLabel("Visitado:"));
+        chkVisitado = new JCheckBox();
+        chkVisitado.setEnabled(false);
+        chkVisitado.setOpaque(false);
+        add(chkVisitado);
     }
 
     /**
