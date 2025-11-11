@@ -57,9 +57,9 @@ public class PanelDetallesRestaurante extends JPanel
      */
     private void actualizarRestaurante( String nombre, int calificacion, boolean visitado )
     {
-    	labNombre.setText(nombre);
-        labCalificacion.setIcon(buscarIconoCalificacion(calificacion));
-        chkVisitado.setSelected(visitado);
+    labNombre.setText(nombre);
+    labCalificacion.setIcon(buscarIconoCalificacion(calificacion));
+    chkVisitado.setSelected(visitado);
     }
 
     /**
